@@ -7,13 +7,17 @@ import { useDispatch } from "react-redux";
 import moment from "moment";
 import { useNavigate } from "react-router-dom";
 
-import { deletePost } from "../../../actions/posts.js";
+import { likePost, deletePost } from "../../../actions/posts.js";
 import useStyles from "./styles.js";
 
 const Post = ({ post, setCurrentId }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const classes = useStyles();
+
+    const handleLike = async () => {
+        dispatch(likePost(post._id));
+    };
 
     const openPost = (e) => {
 
@@ -45,9 +49,9 @@ const Post = ({ post, setCurrentId }) => {
                 <Typography variant="body2" color="textSecondary" component="p">{post.message.split(' ').splice(0, 20).join(' ')}...</Typography>
             </CardContent>
             <CardActions className={classes.cardActions}>
-                <Button size="small" color="primary" onClick={() => {}}>
+                <Button size="small" color="primary" onClick={handleLike}>
                     <ThumbUpAltIcon fontSize="small" />
-                    Like
+                    &nbsp; Like &nbsp;
                     {post.likeCount}
                 </Button>
                 <Button size="small" color="secondary" onClick={() => dispatch(deletePost(post._id))}>
