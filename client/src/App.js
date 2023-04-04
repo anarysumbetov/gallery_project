@@ -7,12 +7,14 @@ import Home from "./components/Home/Home.js";
 import Auth from "./components/Auth/Auth.js";
 
 const App = () => {
+  const user = JSON.parse(localStorage.getItem('profile'));
+
   return (
     <Container maxWidth="xl">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/auth" element={<Auth />} />
+        <Route path="/auth" element={!user ? <Auth /> : <Navigate replace to="/posts" />} />
       </Routes>
     </Container>
   );
