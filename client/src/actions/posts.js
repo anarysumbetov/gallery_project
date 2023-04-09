@@ -39,12 +39,13 @@ export const getPostsBySearch = (searchQuery) => async (dispatch) => {
   }
 };
 
-export const createPost = (post) => async (dispatch) => {
+export const createPost = (post, navigate) => async (dispatch) => {
     try {
         dispatch({ type: START_LOADING });
         const { data } = await api.createPost(post);
 
         dispatch({ type: CREATE, payload: data });
+        navigate(`/posts/${data._id}`);
     } catch (error) {
         console.log("createPost error:", error);
     }
@@ -61,8 +62,12 @@ export const updatedPost = (id, post) => async (dispatch) => {
 };
 
 export const likePost = (id) => async (dispatch) => {
+  const user = JSON.parse(localStorage.getItem('profile'));
+  const token = user === null || user === undefined ? undefined : user.token;
+  // it is the same like const token = user?.token;
+
   try {
-    const { data } = await api.likePost(id);
+    const { data } = await api.likePost(id, token);
 
     dispatch({ type: LIKE, payload: data });
   } catch (error) {
