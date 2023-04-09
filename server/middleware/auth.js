@@ -4,7 +4,9 @@ const secret = 'test';
 
 const auth = async (req, res, next) => {
     try {
-        const token = req.headers.authorization.split(" ")[1];
+        const reqHeadersAuthorization = req.headers === null || req.headers === undefined ? undefined : req.headers.authorization;
+        // it is the same like const token = req.headers?.authorization;
+        const token = reqHeadersAuthorization.split(" ")[1];
         const isCustomAuth = token.length < 500;
         
         let decodedData;
