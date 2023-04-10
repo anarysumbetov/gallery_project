@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate, useLocation } from "react-router-dom";
 import ChipInput from "material-ui-chip-input";
 
-import { getPosts } from "../../actions/posts.js";
+import { getPostsBySearch } from "../../actions/posts.js";
 import Posts from "../Posts/Posts.js";
 import Form from "../Form/Form.js";
 import Paginate from "../Pagination.jsx";
@@ -26,14 +26,10 @@ const Home = () => {
     const [search, setSearch] = useState('');
     const [tags, setTags] = useState([]);
     const navigate = useNavigate();
-  
-    useEffect(() => {
-      dispatch(getPosts());
-    }, [currentId, dispatch]);
 
     const searchPost = () => {
         if (search.trim() || tags) {
-            // dispatch(getPostsBySearch({ search, tags: tags.join(',') }));
+            dispatch(getPostsBySearch({ search, tags: tags.join(',') }));
             navigate(`/posts/search?searchQuery=${search || 'none'}&tags=${tags.join(',')}`);
         } else {
             navigate('/');
