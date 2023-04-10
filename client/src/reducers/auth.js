@@ -2,7 +2,7 @@ import * as actionType from "../constants/actionTypes.js";
 
 const authReducer = (state = { authData: null }, action) => {
     const actionData = action === null || action === undefined ? undefined : action.data;
-    // it is the same like const token = action?.data;
+    // it is the same like const actionData = action?.data;
 
     switch (action.type) {
         case actionType.AUTH:

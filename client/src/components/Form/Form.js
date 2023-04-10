@@ -25,10 +25,10 @@ const Form = ({ currentId, setCurrentId }) => {
     }, [post]);
 
     const userResult = user === null || user === undefined ? undefined : user.result;
-    // it is the same like const token = user?.result;
+    // it is the same like const userResult = user?.result;
 
     const userResultName = userResult === null || userResult === undefined ? undefined : userResult.name;
-    // it is the same like const token = user?.result?.name;
+    // it is the same like const userResultName = user?.result?.name;
 
     const handleSubmit = (e) => {
         e.preventDefault();
