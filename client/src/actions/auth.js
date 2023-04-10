@@ -7,7 +7,7 @@ export const signin = (formData, router) => async (dispatch) => {
 
         dispatch({ type: AUTH, data });
 
-        router.push('/');
+        router('/');
     } catch (error) {
         console.log("signin error:", error);
     }
@@ -19,7 +19,7 @@ export const signup = (formData, router) => async (dispatch) => {
 
         dispatch({ type: AUTH, data });
 
-        router.push('/');
+        router('/');
     } catch (error) {
         console.log("signup error:", error);
     }
