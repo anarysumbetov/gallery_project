@@ -1,6 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
+  "homepage": "https://anarysumbetov.github.io/gallery_project/posts",
   "private": true,
   "proxy": "http://localhost:5000",
   "dependencies": {
@@ -36,8 +37,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts build",
+    "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -67,5 +70,8 @@
     "@babel/helper-create-class-features-plugin": "7.19.0",
     "@babel/helper-module-transforms": "7.19.6",
     "babel-loader": "8.2.5"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
