@@ -1,7 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "homepage": "https://anarysumbetov.github.io/gallery_project/posts",
+  "homepage": "https://anarysumbetov.github.io/gallery_project/",
   "private": true,
   "proxy": "http://localhost:5000",
   "dependencies": {
