@@ -1,15 +1,15 @@
 {
-  "main.css": "/gallery_project/static/css/main.315dc4ff.chunk.css",
-  "main.js": "/gallery_project/static/js/main.d3b64e2f.chunk.js",
-  "main.js.map": "/gallery_project/static/js/main.d3b64e2f.chunk.js.map",
-  "static/js/1.5fe4e9a1.chunk.js": "/gallery_project/static/js/1.5fe4e9a1.chunk.js",
-  "static/js/1.5fe4e9a1.chunk.js.map": "/gallery_project/static/js/1.5fe4e9a1.chunk.js.map",
-  "runtime~main.js": "/gallery_project/static/js/runtime~main.52e01c7a.js",
-  "runtime~main.js.map": "/gallery_project/static/js/runtime~main.52e01c7a.js.map",
-  "static/media/memoriesLogo.png": "/gallery_project/static/media/memoriesLogo.dc8bbfe3.png",
-  "static/media/memoriesText.png": "/gallery_project/static/media/memoriesText.2b89c5fa.png",
-  "static/css/main.315dc4ff.chunk.css.map": "/gallery_project/static/css/main.315dc4ff.chunk.css.map",
-  "index.html": "/gallery_project/index.html",
-  "precache-manifest.f10653267eba646d391d800f6f30df97.js": "/gallery_project/precache-manifest.f10653267eba646d391d800f6f30df97.js",
-  "service-worker.js": "/gallery_project/service-worker.js"
+  "main.css": "/gallery_project/posts/static/css/main.315dc4ff.chunk.css",
+  "main.js": "/gallery_project/posts/static/js/main.76182efc.chunk.js",
+  "main.js.map": "/gallery_project/posts/static/js/main.76182efc.chunk.js.map",
+  "static/js/1.8f0dd648.chunk.js": "/gallery_project/posts/static/js/1.8f0dd648.chunk.js",
+  "static/js/1.8f0dd648.chunk.js.map": "/gallery_project/posts/static/js/1.8f0dd648.chunk.js.map",
+  "runtime~main.js": "/gallery_project/posts/static/js/runtime~main.892e2af2.js",
+  "runtime~main.js.map": "/gallery_project/posts/static/js/runtime~main.892e2af2.js.map",
+  "static/media/memoriesLogo.png": "/gallery_project/posts/static/media/memoriesLogo.dc8bbfe3.png",
+  "static/media/memoriesText.png": "/gallery_project/posts/static/media/memoriesText.2b89c5fa.png",
+  "static/css/main.315dc4ff.chunk.css.map": "/gallery_project/posts/static/css/main.315dc4ff.chunk.css.map",
+  "index.html": "/gallery_project/posts/index.html",
+  "precache-manifest.5791d91cbaecb8a5845f21da86439411.js": "/gallery_project/posts/precache-manifest.5791d91cbaecb8a5845f21da86439411.js",
+  "service-worker.js": "/gallery_project/posts/service-worker.js"
 }
